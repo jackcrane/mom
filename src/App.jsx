@@ -96,6 +96,30 @@ const images = [
     src: "/worlds.JPG",
     alt: "all the way to world-famous detroit",
   },
+  {
+    src: "/billiken.png",
+    alt: "drop off day...",
+  },
+  {
+    src: "/covid-shot.png",
+    alt: "keeping everyone safe",
+  },
+  {
+    src: "/downtown.png",
+    alt: "always lighting up pictures",
+  },
+  {
+    src: "/driveway-visits.png",
+    alt: "your covid obsession: keeping us all sane :)",
+  },
+  {
+    src: "/robeling.png",
+    alt: "my favorite urban explorer",
+  },
+  {
+    src: "/xu-game.png",
+    alt: "return of the silver suit",
+  },
 ];
 
 const PhotoContainer = styled.div`
@@ -165,6 +189,15 @@ const HeaderTop = styled(Header)`
   opacity: ${(props) => (props.transparent ? 0.2 : 0.6)};
 `;
 
+const randomize = (arr) => {
+  const newArr = [];
+  while (arr.length > 0) {
+    const index = Math.floor(Math.random() * arr.length);
+    newArr.push(arr.splice(index, 1)[0]);
+  }
+  return newArr;
+};
+
 export default () => {
   const [transparent, setTransparent] = useState(false);
   return (
@@ -174,7 +207,7 @@ export default () => {
         <Title>i have the awesomest mom ever!</Title>
       </Header>
       <PhotosContainer>
-        {images.map((image) => (
+        {randomize(images).map((image) => (
           <Photo src={image.src} alt={image.alt} />
         ))}
       </PhotosContainer>
