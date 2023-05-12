@@ -26,12 +26,27 @@ const Container = styled.div`
 const Title = styled.h1`
   font-size: 150px;
   margin: 0;
+  @media screen and (max-width: 800px) {
+    font-size: 120px;
+  }
+  @media screen and (max-width: 630px) {
+    font-size: 90px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 70px;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 50px;
+  }
   color: ${colors.blue};
   line-height: 0.8;
 `;
 
 const Subtitle = styled.h2`
   font-size: 50px;
+  @media screen and (max-width: 600px) {
+    font-size: 30px;
+  }
   margin: 0;
   color: ${colors.blue};
 `;
@@ -90,6 +105,9 @@ const PhotoContainer = styled.div`
   background-color: white;
   /* height: 300px; */
   width: 300px;
+  @media screen and (max-width: 430px) {
+    width: 80%;
+  }
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   margin: 20px;
   z-index: 1000;
@@ -120,6 +138,9 @@ const Photo = (props) => (
 
 const Header = styled.div`
   height: 80vh;
+  @media screen and (max-width: 500px) {
+    height: 60vh;
+  }
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,6 +154,9 @@ const PhotosContainer = styled.div`
   align-items: flex-end;
   flex-direction: column;
   margin-top: 80vh;
+  @media screen and (max-width: 500px) {
+    margin-top: 60vh;
+  }
   margin-bottom: 200px;
 `;
 
