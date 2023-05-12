@@ -112,7 +112,7 @@ const PhotoContainer = styled.div`
   margin: 20px;
   z-index: 1000;
   transition: all 0.2s ease-in-out;
-  rotate: ${() => Math.random() * (10 - -10) + -10}deg;
+  rotate: ${() => Math.random() * (5 - -5) + -5}deg;
   &:hover {
     rotate: 0deg;
   }
