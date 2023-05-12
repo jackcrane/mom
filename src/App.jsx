@@ -127,10 +127,14 @@ const PhotoContainer = styled.div`
   flex-direction: column;
   padding: 20px;
   background-color: white;
-  /* height: 300px; */
+
   width: 300px;
   @media screen and (max-width: 430px) {
-    width: 80%;
+    /* width: 80%; */
+    width: 250px;
+  }
+  @media screen and (max-width: 350px) {
+    width: 200px;
   }
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   margin: 20px;
@@ -144,7 +148,7 @@ const PhotoContainer = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: auto;
+  /* height: auto; */
 `;
 
 const Caption = styled.p`
